@@ -41,6 +41,7 @@
 				margin: 0 1px;
 				position: relative;
 				z-index:1;
+				transition: 0.5s;
 				cursor: pointer;
 			}
 
@@ -51,6 +52,7 @@
 				display: inline-block;
 				content: '';
 				top: 0;
+				transition: 0.5s;
 			}
 
 			li:before {
@@ -76,6 +78,7 @@
 			li.active, li:active, li:hover, li:focus{
 				background: #555;
 				z-index: 2;
+				padding-top: 10px;
 			}
 
 			li.active:before,li:active:before, li:hover:before, li:focus:before {
