@@ -4,6 +4,6 @@ And where it can be used in.
 
 # Example
 
-![css-menu-example](http://url/to/img.png)
+![css-menu-example](https://github.com/antontemchenko/css-menu-example/blob/master/css-menu-example.png)
 
 [Watch DEMO](http://anton.temchenko.com.ua/dev/css-menu-example.html)
