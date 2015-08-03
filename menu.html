@@ -1,114 +1,27 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<style>
-			html, body {
-				margin: 0;
-				padding: 0;
-				height: 100%;
-			}
-			.container {
-				background: -webkit-linear-gradient(pink, yellow);
-				background: -moz-linear-gradient(pink, yellow);
-				background: -ms-linear-gradient(pink, yellow);
-				background: -o-linear-gradient(pink, yellow);				
-				background: linear-gradient(pink, yellow);
-				width: 100%;
-				height: 100%;
-			}
-
-			div.top {
-				background: #555;    
-				width:100%;
-				height:30px;
-				margin-bottom:0;
-			}
-
-			ul {
-				margin-top:0;
-				width:auto;
-				padding: 0 20px 20px 20px;
-			}
-
-			li {
-				float: left;
-				list-style: none;
-				background: rgba(0,0,0,.2);
-				color: #fff;
-				padding: 5px 20px;
-				border-bottom-left-radius: 10px;
-				border-bottom-right-radius: 10px;
-				margin: 0 1px;
-				position: relative;
-				z-index:1;
-				transition: 0.5s;
-				cursor: pointer;
-			}
-
-			li:before, li:after {
-				width: 10px;
-				height: 10px;
-				position: absolute;
-				display: inline-block;
-				content: '';
-				top: 0;
-				transition: 0.5s;
-			}
-
-			li:before {
-				left:0;
-				margin-left: -10px;
-				background-image: -webkit-radial-gradient(circle at 0 100%, rgba(0,0,0,0) 10px, rgba(0,0,0,.2) 0px);
-				background-image: -moz-radial-gradient(circle at 0 100%, rgba(0,0,0,0) 10px, rgba(0,0,0,.2) 0px);
-				background-image: -ms-radial-gradient(circle at 0 100%, rgba(0,0,0,0) 10px, rgba(0,0,0,.2) 0px);
-				background-image: -o-radial-gradient(circle at 0 100%, rgba(0,0,0,0) 10px, rgba(0,0,0,.2) 0px);
-				background-image: radial-gradient(circle at 0 100%, rgba(0,0,0,0) 10px, rgba(0,0,0,.2) 0px);
-			}
-
-			li:after {
-				right:0;
-				margin-right: -10px;
-				background-image: -webkit-radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, rgba(0,0,0,.2) 0px);
-				background-image: -moz-radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, rgba(0,0,0,.2) 0px);
-				background-image: -ms-radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, rgba(0,0,0,.2) 0px);
-				background-image: -o-radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, rgba(0,0,0,.2) 0px);
-				background-image: radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, rgba(0,0,0,.2) 0px);
-			}
-
-			li.active, li:active, li:hover, li:focus{
-				background: #555;
-				z-index: 2;
-				padding-top: 10px;
-			}
-
-			li.active:before,li:active:before, li:hover:before, li:focus:before {
-				background-image: -webkit-radial-gradient(circle at 0 100%, rgba(0,0,0,0) 10px, #555 0px);
-				background-image: -moz-radial-gradient(circle at 0 100%, rgba(0,0,0,0) 10px, #555 0px);
-				background-image: -ms-radial-gradient(circle at 0 100%, rgba(0,0,0,0) 10px, #555 0px);
-				background-image: -o-radial-gradient(circle at 0 100%, rgba(0,0,0,0) 10px, #555 0px);
-				background-image: radial-gradient(circle at 0 100%, rgba(0,0,0,0) 10px, #555 0px);
-			}
-
-			li.active:after, li:active:after, li:hover:after, li:focus:after {
-				background-image: -webkit-radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, #555 0px);
-				background-image: -moz-radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, #555 0px);
-				background-image: -ms-radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, #555 0px);
-				background-image: -o-radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, #555 0px);
-				background-image: radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, #555 0px);
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<body>
+	<body ng-app>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
 		<div class="container">
-			<nav>
-				<div class="top"></div>
-				<ul>
-					<li>Menu 1</li>
-					<li class="active">Menu 2</li>
-					<li>Menu 3</li>
-					<li>Menu 4</li>
+			<div class="top">
+				<h1>Css menu</h1>
+				<h2>with beveled corners</h2>
+			</div>
+			<div class="middle">
+				<ul ng-init="menu = 1">
+					<li ng-click="menu = 1; console.log(1);" ng-class="{'active' : menu === 1 }">Menu 1</li>
+					<li ng-click="menu = 2" ng-class="{'active' : menu === 2 }">Menu 2</li>
+					<li ng-click="menu = 3" ng-class="{'active' : menu === 3 }">Menu 3</li>
+					<li ng-click="menu = 4" ng-class="{'active' : menu === 4 }">Menu 4</li>
 				</ul>
-			</nav>
+				<h1>Css tabs</h1>
+				<h2>with animation</h2>
+			</div>
+			<div class="bottom">
+			</div>
 		</div>
 	</body>
 </html>
