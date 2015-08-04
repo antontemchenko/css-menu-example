@@ -117,3 +117,36 @@ li.active:after, li:active:after, li:hover:after, li:focus:after {
 	background-image: -o-radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, #555 0px);
 	background-image: radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, #555 0px);
 }
+
+.bottom ul {
+	width:472px;
+}
+.bottom a, .bottom span {
+	display: inline-block;
+	transition: 1s ease-out;
+}
+
+.bottom ul li {
+	margin: 0 10px;
+	transition: 1s ease-out;
+	perspective-origin: 50% 100px;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+	background:#ccc;
+}
+
+.bottom ul li:hover, .bottom ul li.active, .bottom ul li:active {
+	background:#ccc;
+}
+
+.bottom ul a.clicked {
+	transform: translateY(-100%);
+}
+
+.bottom ul a.clicked li {
+	transform: rotateX(180deg) 
+}
+
+.bottom ul a.clicked li span {
+	transform: rotateX(180deg) 
+}
