@@ -119,7 +119,7 @@ li.active:after, li:active:after, li:hover:after, li:focus:after {
 }
 
 .bottom ul {
-	width:472px;
+	width: 472px;
 }
 .bottom a, .bottom span {
 	display: inline-block;
@@ -132,10 +132,25 @@ li.active:after, li:active:after, li:hover:after, li:focus:after {
 	perspective-origin: 50% 100px;
 	perspective: 1000px;
 	transform-style: preserve-3d;
-	background:#ccc;
+	background:#aaa;
+}
+.bottom ul li:before, .bottom ul li:hover:before, .bottom ul li:active:before {
+	background-image: -webkit-radial-gradient(circle at 0 100%, rgba(0,0,0,0) 10px, #aaa 0px);
+	background-image: -moz-radial-gradient(circle at 0 100%, rgba(0,0,0,0) 10px, #aaa 0px);
+	background-image: -ms-radial-gradient(circle at 0 100%, rgba(0,0,0,0) 10px, #aaa 0px);
+	background-image: -o-radial-gradient(circle at 0 100%, rgba(0,0,0,0) 10px, #aaa 0px);
+	background-image: radial-gradient(circle at 0 100%, rgba(0,0,0,0) 10px, #aaa 0px);
 }
 
-.bottom ul li:hover, .bottom ul li.active, .bottom ul li:active {
+.bottom ul li:after, .bottom ul li:hover:after, .bottom ul li:active:after {
+	background-image: -webkit-radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, #aaa 0px);
+	background-image: -moz-radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, #aaa 0px);
+	background-image: -ms-radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, #aaa 0px);
+	background-image: -o-radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, #aaa 0px);
+	background-image: radial-gradient(circle at 100% 100%, rgba(0,0,0,0) 10px, #aaa 0px);
+}
+
+.bottom ul li:hover, .bottom ul a.clicked li, .bottom ul li:active {
 	background:#ccc;
 }
 
