@@ -163,5 +163,21 @@ li.active:after, li:active:after, li:hover:after, li:focus:after {
 }
 
 .bottom ul a.clicked li span {
-	transform: rotateX(180deg) 
+	opacity: 0;
+}
+.bottom ul a.clicked li span.rotated {
+	transform: rotateX(180deg); 
+	position: absolute; 
+	color: #fff; 
+	display: block; 
+	top: 5px; 
+    	opacity: 1;
+}
+.bottom ul a li span.rotated {
+	transform: rotateX(180deg);
+	position: absolute;
+	color: #fff;
+	display: block;
+	top: 5px;
+	opacity: 0;
 }
