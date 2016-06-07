@@ -22,10 +22,18 @@
 			</div>
 			<div class="bottom">
 				<ul ng-init="secondMenu = 1">
-					<a ng-click="secondMenu = 3" ng-class="{'clicked' : secondMenu === 3 }"><li><span>Menu 3</span></li></a>
-					<a ng-click="secondMenu = 2" ng-class="{'clicked' : secondMenu === 2 }"><li><span>Menu 2</span></li></a>
-					<a ng-click="secondMenu = 1" ng-class="{'clicked' : secondMenu === 1 }"><li><span>Menu 1</span></li></a>
-					<a ng-click="secondMenu = 4" ng-class="{'clicked' : secondMenu === 4 }"><li><span>Menu 4</span></li></a>
+					<a ng-click="secondMenu = 3" ng-class="{'clicked' : secondMenu === 3 }">
+						<li><span>Menu 3</span><span class="rotated">Menu 3</span></li>
+					</a>
+					<a ng-click="secondMenu = 2" ng-class="{'clicked' : secondMenu === 2 }">
+						<li><span>Menu 2</span><span class="rotated">Menu 2</span></li>
+					</a>
+					<a ng-click="secondMenu = 1" ng-class="{'clicked' : secondMenu === 1 }">
+						<li><span>Menu 1</span><span class="rotated">Menu 1</span></li>
+					</a>
+					<a ng-click="secondMenu = 4" ng-class="{'clicked' : secondMenu === 4 }">
+						<li><span>Menu 4</span><span class="rotated">Menu 4</span></li>
+					</a>
 				</ul>
 			</div>
 		</div>
